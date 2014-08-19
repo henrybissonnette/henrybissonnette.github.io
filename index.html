@@ -1,12 +1,30 @@
 <!doctype HTML>
 <head>
   <title>
-    Nanna!
+    JavaScript Puzzles
   </title>
+  <script src="ace/min/ace.js"></script>
+  <script src="ace/min/mode-javascript.js"></script>
+  <script src="ace/min/theme-monokai.js"></script>
+  <script src="bundle.js"></script>
+  <style type="text/css" media="screen">
+      #javascript-editor { 
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+      }
+  </style>
 </head>
 <body>
   <a href="/test.html">test</a>
-  <h1>Hello Nanna!<h1>
-  <img src="Kitten-pic-cute-kittens-16292210-1024-768.jpg"/>
-  My page works :p
+  <h1>Learn Javascript</h1>
+  <p>Learning Javascript the easy way. This'll be a piece of cake. For real.</p>
+  <p>Where to start...</p>
+  <p>Well. Make sure you're using Chrome. We'll need the developer tools. Umm... let's see. </p>
+  <div id="javascript-editor">function foo(items) {
+      var x = "All this is syntax highlighted";
+      return x;
+  }</div>
 </body>

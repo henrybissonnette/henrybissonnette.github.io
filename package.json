@@ -1,0 +1,24 @@
+{
+  "name": "play-javascript",
+  "version": "0.0.0",
+  "description": "Learn JavaScript in an easy an gradual way. For kids from 10 to 92.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrybissonnette/henrybissonnette.github.io.git"
+  },
+  "author": "Hank Bissonnette",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henrybissonnette/henrybissonnette.github.io/issues"
+  },
+  "homepage": "https://github.com/henrybissonnette/henrybissonnette.github.io",
+  "dependencies": {
+    "ace": "0.0.2",
+    "brace": "^0.3.0",
+    "browserify": "^5.10.0"
+  }
+}
