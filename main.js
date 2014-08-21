@@ -16,7 +16,7 @@ init = function () {
   editor = ace.edit('javascript-editor');
   editor.setTheme('ace/theme/monokai');
   editor.getSession().setMode('ace/mode/javascript');
-  
+
   setTimeout(function() {
     typing.printFormattedLines([
       "Hello Phillip!",
@@ -34,8 +34,10 @@ init = function () {
       "",
       "So...",
       "Let's try it out.",
+      "",
       "Remember how functions work?",
       "Something like this:",
+      "",
       "aFunction = function () {",
       "  console.log('this function is amazing');",
       "}",
@@ -44,6 +46,7 @@ init = function () {
       "is 'return' values.", 
       "When you call a function, it gives back whatever it's return value is.",
       "This function for instance would return the sum of two numbers:",
+      "",
       "addNumbers = function (a, b) {",
       "  return a + b;",
       "}",
