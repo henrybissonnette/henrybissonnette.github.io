@@ -51,6 +51,6 @@ module.exports = {
     setTimeout(function(){
       editor.insert(char);
       continuation()
-    }, 1)
+    }, Math.random() * (100) + 30)
   }
 }
