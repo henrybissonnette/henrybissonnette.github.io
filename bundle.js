@@ -1,6 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-
-
 module.exports = {
   goToEnd: function() {
     editor.gotoLine(editor.session.getLength() + 1)
@@ -52,11 +50,27 @@ module.exports = {
     setTimeout(function(){
       editor.insert(char);
       continuation()
-    }, Math.random() * (100) + 30)
+    }, this.delayTime())
+  },
+
+  delayTime: function () {
+    return Math.random() * (window.CONFIG[window.ENV]["delayRange"]) + window.CONFIG[window.ENV]["minDelay"];
   }
 }
 },{}],2:[function(require,module,exports){
 typing = require("./assets/js/typing.js")
+
+window.ENV = window.location.origin === "file://" ? "dev" : "prod" 
+window.CONFIG = {
+  dev: {
+    delayRange: 0,
+    minDelay: 1
+  },
+  prod: {
+    delayRange: 100,
+    minDelay: 30
+  }
+}
 
 bindRun = function () {
   $('#run').on('click', function () {

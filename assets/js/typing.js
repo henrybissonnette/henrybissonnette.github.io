@@ -1,5 +1,3 @@
-
-
 module.exports = {
   goToEnd: function() {
     editor.gotoLine(editor.session.getLength() + 1)
@@ -51,6 +49,10 @@ module.exports = {
     setTimeout(function(){
       editor.insert(char);
       continuation()
-    }, Math.random() * (100) + 30)
+    }, this.delayTime())
+  },
+
+  delayTime: function () {
+    return Math.random() * (window.CONFIG[window.ENV]["delayRange"]) + window.CONFIG[window.ENV]["minDelay"];
   }
 }
