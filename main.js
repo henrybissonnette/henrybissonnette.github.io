@@ -1,16 +1,5 @@
 typing = require("./assets/js/typing.js")
-
 window.ENV = window.location.origin === "file://" ? "dev" : "prod" 
-window.CONFIG = {
-  dev: {
-    delayRange: 0,
-    minDelay: 1
-  },
-  prod: {
-    delayRange: 100,
-    minDelay: 30
-  }
-}
 
 bindRun = function () {
   $('#run').on('click', function () {
@@ -20,8 +9,6 @@ bindRun = function () {
     }
   })
 }
-
-
 
 init = function () {
   bindRun();

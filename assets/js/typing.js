@@ -1,3 +1,5 @@
+CONFIG = require("../../config.json")
+
 module.exports = {
   goToEnd: function() {
     editor.gotoLine(editor.session.getLength() + 1)

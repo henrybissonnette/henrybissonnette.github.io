@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "delayRange": 0,
+    "minDelay": 1
+  },
+  "prod": {
+    "delayRange": 100,
+    "minDelay": 30
+  }
+}
