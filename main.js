@@ -11,7 +11,14 @@
     })
   }
 
+  initializeEditor = function () {
+    window.editor = ace.edit('javascript-editor');
+    editor.setTheme('ace/theme/monokai');
+    editor.getSession().setMode('ace/mode/javascript');
+  }
+
   initializeExercise = function (exercise) {
+    editor.setValue("")
     setTimeout(function() {
       exercise.intro()
       }, 2000);
@@ -21,9 +28,7 @@
 
   init = function () {
     bindRun();
-    editor = ace.edit('javascript-editor');
-    editor.setTheme('ace/theme/monokai');
-    editor.getSession().setMode('ace/mode/javascript');
+    initializeEditor();
     initializeExercise(openingExercise);
   }
 

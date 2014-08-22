@@ -1,0 +1,26 @@
+#ui {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#ui ul {
+  list-style: none;
+}
+
+#ui li {
+  cursor: pointer;
+  padding: 3px;
+  border: solid 2px white;
+  background-color: black;
+  color: white;
+}
+
+#javascript-editor { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
